@@ -39,6 +39,8 @@ router.post('/login', async (req, res, next) => {
   }
 })
 
+router.get('/')
+
 router.get('/logout', async (req, res, next) => {
   res.json('logout')
 })
