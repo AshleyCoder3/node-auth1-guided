@@ -16,12 +16,11 @@ server.use(session({
   secret: 'nobody tosses a dwarf!', // put this in the environment, not the code!!!!
   cookie: {
     maxAge: 1 * 24 * 60 * 60 * 1000,
-    secure: true, // only set cookies over https. Server will not send back a cookie over http.
-  }, // 1 day in milliseconds
+    secure: false, // in prod, it should be true: ONLY HTTPS!!!!!!!!
   httpOnly: true, // don't let JS code access cookies. Browser extensions run JS code on your browser!
   resave: false,
   saveUninitialized: false,
-}));
+});
 
 server.use('/api/users', usersRouter);
 server.use('/api/auth', authRouter);
