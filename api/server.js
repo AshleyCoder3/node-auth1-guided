@@ -12,8 +12,8 @@ server.use(express.static(path.join(__dirname, '../client')));
 // server.use(helmet()); // fewer headers
 server.use(express.json());
 server.use(session({
-  
-}))
+
+}));
 
 server.use('/api/users', usersRouter);
 server.use('/api/auth', authRouter);
