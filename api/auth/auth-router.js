@@ -14,7 +14,9 @@ router.post('/register', async (req, res, next) => {
 
 router.post('/login', async (req, res, next) => {
   const { username, password } = req.body
-  
+  // check if username in db
+  // recreate hash from password
+  // if 
 })
 
 router.get('/logout', async (req, res, next) => {
