@@ -16,8 +16,11 @@ server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
+let counter = 0;
+
 server.get('/gimme-cookie', (req, res) => {
-  res.cookie('the-truth', '')
+  res.cookie('the-truth', 'lady gaga rocks')
+  res.send()
 })
 
 server.use('*', (req, res, next) => {
