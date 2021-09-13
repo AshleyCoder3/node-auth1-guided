@@ -39,7 +39,15 @@ router.post('/login', async (req, res, next) => {
   }
 })
 
-router.get('/')
+router.get('/logout', (req, res ) => {
+  if (req.session.user) {
+
+  } else {
+    res.json({
+      message: 'you were not logged in to begin with'
+    })
+  }
+})
 
 router.get('/logout', async (req, res, next) => {
   res.json('logout')
