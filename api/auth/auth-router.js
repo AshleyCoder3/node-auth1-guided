@@ -31,7 +31,6 @@ router.post('/login', async (req, res, next) => {
       next({ status: 401, message: 'bad credentials!' })
     }
 
-
     res.json('login')
   } catch (err) {
     next(err)
