@@ -6,6 +6,10 @@ router.post('/register', async (req, res, next) => {
   const { username, password } = req.body
   const hash = bcrypt.hashSync(password, 8) // 2 ^ 8
   const newUser = { username, password: hash }
+
+  const user = await User.add(newUser)
+
+  
   res.json('register')
 })
 
