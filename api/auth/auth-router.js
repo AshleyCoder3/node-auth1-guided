@@ -9,8 +9,7 @@ router.post('/register', async (req, res, next) => {
 
   const user = await User.add(newUser)
 
-  
-  res.json('register')
+  res.status(201).json(user)
 })
 
 router.post('/login', async (req, res, next) => {
