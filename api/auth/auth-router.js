@@ -16,7 +16,8 @@ router.post('/login', async (req, res, next) => {
   const { username, password } = req.body
   // check if username in db
   // recreate hash from password
-  // if 
+  // if username exists, AND hash matches the one in db
+  // THEN START A SESSION WITH THE HELP OF A LIB expresse-session
 })
 
 router.get('/logout', async (req, res, next) => {
