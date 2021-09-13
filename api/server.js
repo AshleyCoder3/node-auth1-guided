@@ -19,7 +19,7 @@ server.use(session({
     secure: false, // in prod, it should be true: ONLY HTTPS!!!!!!!!
   },
   httpOnly: true, // don't let JS code access cookies. Browser extensions run JS code on your browser!
-  resave: false, // IGNORE
+  resave: false, // IGNORE, some libs need this
   saveUninitialized: false, // only save a session if user approves
 }));
 
