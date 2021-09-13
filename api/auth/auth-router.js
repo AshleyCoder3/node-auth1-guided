@@ -12,13 +12,4 @@ router.get('/logout', async (req, res, next) => {
   res.json('logout')
 })
 
-
-
-
-
-
-
-
-
-
 module.exports = router
