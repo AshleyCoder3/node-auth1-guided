@@ -12,8 +12,8 @@ server.use(express.static(path.join(__dirname, '../client')));
 // server.use(helmet()); // fewer headers
 server.use(express.json());
 server.use(session({
-  name: 'monkey', // default is connect.sid
-  secret: 'nobody tosses a dwarf!',
+  name: 'monkey', // the name of the cookie the server will place on client (session id)
+  secret: 'nobody tosses a dwarf!', // put this in the environment, not the code!!!!
   cookie: {
     maxAge: 1 * 24 * 60 * 60 * 1000,
     secure: true, // only set cookies over https. Server will not send back a cookie over http.
