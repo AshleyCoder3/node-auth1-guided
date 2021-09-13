@@ -20,7 +20,9 @@ router.post('/login', async (req, res, next) => {
     const { username, password } = req.body
     const [existingUser] = await User.findBy({ username })
 
-    if (existingUser && bcrypt.compareSync(password, existingUser.password)
+    if (existingUser && bcrypt.compareSync(password, existingUser.password)) {
+      
+    }
 
     // check if username in db
     // recreate hash from password
