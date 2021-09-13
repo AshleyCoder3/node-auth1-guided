@@ -16,6 +16,10 @@ server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
+server.get('/gimme-cookie', (req, res) => {
+  res.cookie('the-truth', '')
+})
+
 server.use('*', (req, res, next) => {
   next({ status: 404, message: 'not found!' });
 });
