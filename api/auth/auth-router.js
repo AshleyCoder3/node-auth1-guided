@@ -19,6 +19,10 @@ router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body
     const [existingUser] = await User.findBy({ username })
+    // check if username in db
+    // recreate hash from password
+    // if username exists, AND hash matches the one in db
+    // THEN START A SESSION WITH THE HELP OF A LIB expresse-session
 
     if (existingUser && bcrypt.compareSync(password, existingUser.password)) {
       // here this means user exists AND credentials good
@@ -27,10 +31,6 @@ router.post('/login', async (req, res, next) => {
       next({ status: 401, message: 'bad credentials!' })
     }
 
-    // check if username in db
-    // recreate hash from password
-    // if username exists, AND hash matches the one in db
-    // THEN START A SESSION WITH THE HELP OF A LIB expresse-session
 
     res.json('login')
   } catch (err) {
