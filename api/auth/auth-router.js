@@ -18,7 +18,7 @@ router.post('/register', async (req, res, next) => {
 router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body
-    const users = 
+    const users = await User.findBy({ username })
     // check if username in db
     // recreate hash from password
     // if username exists, AND hash matches the one in db
