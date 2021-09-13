@@ -19,7 +19,7 @@ server.get('/', (req, res) => {
 let counter = 0;
 
 server.get('/gimme-cookie', (req, res) => {
-  res.cookie('the-truth', 'lady gaga rocks ${counter++} ')
+  res.cookie('the-truth', `lady gaga rocks ${counter++} times`)
   res.send(`I have seen you ${counter++} times before`)
 })
 
