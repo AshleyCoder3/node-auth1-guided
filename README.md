@@ -9,11 +9,11 @@ Guided project for **Node Auth 1** Module.
 
 ## Project Setup
 
-- [ ] clone this repository.
-- [ ] move into the project folder.
-- [ ] type `npm i` to download dependencies.
-- [ ] type `npm run migrate` to run migrations.
-- [ ] type `npm run seed` to populate the db.
-- [ ] type `npm run server` to start the API.
+- [X] clone this repository.
+- [X] move into the project folder.
+- [X] type `npm i` to download dependencies.
+- [X] type `npm run migrate` to run migrations.
+- [X] type `npm run seed` to populate the db.
+- [X] type `npm run server` to start the API.
 
 Please follow along as the instructor adds authentication to the API.
