@@ -28,11 +28,12 @@ router.post('/login', async (req, res, next) => {
       // here this means user exists AND credentials good
       console.log('starting session!!!')
       req.session.user = existingUser
+      res.json({
+        message: `welcome back, ${existingUser.username}`
+      })
     } else {
       next({ status: 401, message: 'bad credentials!' })
     }
-
-    res.json('login')
   } catch (err) {
     next(err)
   }
