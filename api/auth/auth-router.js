@@ -13,7 +13,8 @@ router.post('/register', async (req, res, next) => {
 })
 
 router.post('/login', async (req, res, next) => {
-  res.json('login')
+  const { username, password } = req.body
+  
 })
 
 router.get('/logout', async (req, res, next) => {
