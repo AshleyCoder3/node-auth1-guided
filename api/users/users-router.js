@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const Users = require("./users-model.js");
 
-const protected = (req, res, next) => {
+const onlyAuthed = (req, res, next) => {
   if (req.session.user) {
     next()
   } else {
@@ -10,7 +10,7 @@ const protected = (req, res, next) => {
   }
 }
 
-router.get("/", protected, (req, res, next) => { // we will protect this one!!!!
+router.get("/", onlyAuthed, (req, res, next) => { // we will protect this one!!!!
   Users.find()
     .then(users => {
       res.status(200).json(users);
