@@ -17,10 +17,11 @@ server.use(session({
   cookie: {
     maxAge: 1 * 24 * 60 * 60 * 1000,
     secure: false, // in prod, it should be true: ONLY HTTPS!!!!!!!!
+  },
   httpOnly: true, // don't let JS code access cookies. Browser extensions run JS code on your browser!
   resave: false,
   saveUninitialized: false,
-});
+}));
 
 server.use('/api/users', usersRouter);
 server.use('/api/auth', authRouter);
