@@ -27,6 +27,7 @@ router.post('/login', async (req, res, next) => {
     if (existingUser && bcrypt.compareSync(password, existingUser.password)) {
       // here this means user exists AND credentials good
       console.log('starting session!!!')
+      req.session.user = existingUser
     } else {
       next({ status: 401, message: 'bad credentials!' })
     }
