@@ -19,8 +19,8 @@ server.use(session({
     secure: false, // in prod, it should be true: ONLY HTTPS!!!!!!!!
   },
   httpOnly: true, // don't let JS code access cookies. Browser extensions run JS code on your browser!
-  resave: false,
-  saveUninitialized: false,
+  resave: false, // IGNORE
+  saveUninitialized: false, // only save a session if user approves
 }));
 
 server.use('/api/users', usersRouter);
