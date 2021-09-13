@@ -21,7 +21,7 @@ router.post('/login', async (req, res, next) => {
     const [existingUser] = await User.findBy({ username })
 
     if (existingUser && bcrypt.compareSync(password, existingUser.password)) {
-      
+      // here
     }
 
     // check if username in db
