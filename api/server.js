@@ -12,7 +12,7 @@ server.use(express.static(path.join(__dirname, '../client')));
 // server.use(helmet()); // fewer headers
 server.use(express.json());
 server.use(session({
-  name: 'notsession', // default is connect.sid
+  name: 'monkey', // default is connect.sid
   secret: 'nobody tosses a dwarf!',
   cookie: {
     maxAge: 1 * 24 * 60 * 60 * 1000,
