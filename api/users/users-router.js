@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const Users = require("./users-model.js");
 
-const onlyAuthed = (req, res, next) => {
+const onlyAuthed = (req, res, next) => { // put it in a centralized location
   if (req.session.user) {
     next()
   } else {
