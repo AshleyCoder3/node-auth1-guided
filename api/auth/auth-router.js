@@ -1,7 +1,8 @@
 const router = require('express').Router()
-const 
+const bcrypt = require('bcryptjs')
 
 router.post('/register', async (req, res, next) => {
+  const { username, password } = req.body
   res.json('register')
 })
 
