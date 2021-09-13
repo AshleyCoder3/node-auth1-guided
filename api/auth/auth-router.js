@@ -21,7 +21,10 @@ router.post('/login', async (req, res, next) => {
     const [existingUser] = await User.findBy({ username })
 
     if (existingUser && bcrypt.compareSync(password, existingUser.password)) {
-      // here
+      // here this means user exists AND credentials good
+      console.log('starting session!!!')
+    } else {
+      next({ status: 401, message: 'bad credentials!' })
     }
 
     // check if username in db
