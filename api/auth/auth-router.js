@@ -1,12 +1,12 @@
 const router = require('express').Router()
 
-router.post('/auth/register', async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   res.json('register')
 })
-router.post('/auth/login', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
   res.json('login')
 })
-router.get('/auth/logout', async (req, res, next) => {
+router.get('/logout', async (req, res, next) => {
   res.json('logout')
 })
 
