@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 
 router.post('/register', async (req, res, next) => {
   const { username, password } = req.body
-  const hash bcrypt.hash
+  const hash = bcrypt.hashSync(password, )
   res.json('register')
 })
 
