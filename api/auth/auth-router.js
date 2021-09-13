@@ -19,11 +19,13 @@ router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body
     const users = await User.findBy({ username })
-    
+
     // check if username in db
     // recreate hash from password
     // if username exists, AND hash matches the one in db
     // THEN START A SESSION WITH THE HELP OF A LIB expresse-session
+
+    res.json('login')
   } catch (err) {
     next(err)
   }
